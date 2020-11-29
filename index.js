@@ -25,16 +25,16 @@ function toDoList() {
     }
   }
 
-  // if (addBtnEl) {
-  //   addBtnEl.addEventListener("click", () => {
-  //     const nextItemIndex = list.length + 1;
-  //     addItem({
-  //       name: "task" + nextItemIndex,
-  //       description: "description" + nextItemIndex
-  //     });
-  //     refreshList();
-  //   });
-  // }
+  if (addBtnEl) {
+    addBtnEl.addEventListener("click", () => {
+      const nextItemIndex = list.length + 1;
+      addItem({
+        name: "task" + nextItemIndex,
+        description: "description" + nextItemIndex
+      });
+      refreshList();
+    });
+  }
 
   if (removeBtnEl) {
     removeBtnEl.addEventListener("click", () => {
@@ -61,10 +61,6 @@ function toDoList() {
     add: item => addItem(item),
     remove: () => removeItem()
   };
-}
-
-function onClickAdd() {
-  alert("add clicked");
 }
 
 const list = toDoList();
