@@ -1,11 +1,11 @@
 // Import stylesheets
 import "./style.css";
 
-// Write Javascript code!
 const appDiv = document.getElementById("toDoListTitle");
 appDiv.innerText = `To Do List`;
-
 const listEl = document.getElementById("list");
+const addBtnEl = document.getElementById("addBtn");
+const removeBtnEl = document.getElementById("removeBtn");
 
 function toDoList() {
   let list = [
@@ -19,9 +19,28 @@ function toDoList() {
 
       list.forEach(item => {
         console.log(item.name);
-        listEl.innerHTML += "<li>" + item.name + "</li>";
+        listEl.innerHTML +=
+          "<li class='list-group-item'>" + item.name + "</li>";
       });
     }
+  }
+
+  if (addBtnEl) {
+    addBtnEl.addEventListener("click", () => {
+      const nextItemIndex = list.length + 1;
+      addItem({
+        name: "task" + nextItemIndex,
+        description: "description" + nextItemIndex
+      });
+      refreshList();
+    });
+  }
+
+  if (removeBtnEl) {
+    removeBtnEl.addEventListener("click", () => {
+      removeItem();
+      refreshList();
+    });
   }
 
   function addItem(item) {
@@ -42,14 +61,6 @@ function toDoList() {
     add: item => addItem(item),
     remove: () => removeItem()
   };
-}
-
-function onClickAdd() {
-  const nextItemIndex = list.getList().length + 2;
-  list.add({
-    name: "task" + nextItemIndex,
-    description: "description" + nextItemIndex
-  });
 }
 
 const list = toDoList();

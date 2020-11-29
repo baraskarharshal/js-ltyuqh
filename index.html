@@ -1,8 +1,12 @@
-<div id="toDoListApp">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<div id="toDoListApp" class="p-2">
 	<h1 id="toDoListTitle"></h1>
-	<button onclick="onClickAdd()">Add</button>
-	<button onclick="onClickRemove()">Remove</button>
-	<section>
-		<ul id="list"></ul>
+	<button class="btn btn-success" id="addBtn">Add</button>
+	<button class="btn btn-danger" id="removeBtn">Remove</button>
+	<section class="my-4">
+		<ul id="list" class="list-group"></ul>
 	</section>
 </div>
