@@ -1,12 +1,22 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!DOCTYPE html>
 
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<html>
 
-<div id="toDoListApp" class="p-2">
-	<h1 id="toDoListTitle"></h1>
-	<button class="btn btn-success" id="addBtn">Add</button>
-	<button class="btn btn-danger" id="removeBtn">Remove</button>
-	<section class="my-4">
-		<ul id="list" class="list-group"></ul>
-	</section>
-</div>
+<body>
+	<div id="toDoListApp" class="p-2">
+		<h1 id="toDoListTitle"></h1>
+		<button class="btn btn-success" id="addBtn" onclick="onClickAdd()">Add</button>
+		<button class="btn btn-danger" id="removeBtn">Remove</button>
+		<section class="my-4">
+			<ul id="list" class="list-group"></ul>
+		</section>
+	</div>
+
+	<script src="/index.js"></script>
+</body>
+
+</html>
